@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
  * @Date 2021/6/5
  */
 public class ClientDemo {
-	public static void main(String args[]) throws Exception {
+	public static void main(String[] args) throws Exception {
 		final Options options = new Options();
 		options.addOption("s",true, "server ip");
 		options.addOption("p",true, "server port");

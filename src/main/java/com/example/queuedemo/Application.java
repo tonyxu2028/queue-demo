@@ -17,8 +17,9 @@ import org.apache.commons.cli.*;
  * @Author wallace
  * @Date 2021/6/4
  */
+@SuppressWarnings("ALL")
 public class Application {
-	public static void main(String args[]) throws Exception{
+	public static void main(String[] args) throws Exception{
 		System.out.println("Welcome to queue system!");
 
 		CommandLine cmd = parseOptions(args, buildOptions());
@@ -92,12 +93,18 @@ public class Application {
 	private static Options buildOptions(){
 		final Options options = new Options();
 
-		options.addOption("p", true, "server port");       //port
-		options.addOption("m", "node is master");                 //master
-		options.addOption("s", "node is slave");                  //slave
-		options.addOption("z", true, "ZooKeeper address"); //zk address
-		options.addOption("S", true, "system name");       //system name
-		options.addOption("g", true, "group name");        //group name
+		//port
+		options.addOption("p", true, "server port");
+		//master
+		options.addOption("m", "node is master");
+		//slave
+		options.addOption("s", "node is slave");
+		//zk address
+		options.addOption("z", true, "ZooKeeper address");
+		//system name
+		options.addOption("S", true, "system name");
+		//group name
+		options.addOption("g", true, "group name");
 
 		return options;
 	}
